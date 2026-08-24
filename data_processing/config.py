@@ -1,0 +1,1 @@
+BASE_DIR = "C:/Users/PC/Downloads/AIC26_TayLor"
