@@ -15,7 +15,7 @@ def extract_keyframes_parallel(video_path, frame_column='frame_idx'):
     video_id = os.path.splitext(video_name)[0]
     lxx_prefix = video_id.split("_")[0]
     csv_path = os.path.join(CSV_DIR, f"{video_id}.csv")
-    output_dir = os.path.join(BASE_DIR, f"Keyframes_{lxx_prefix}")
+    output_dir = os.path.join(BASE_DIR, f"Keyframes_{lxx_prefix}", video_id)
     os.makedirs(output_dir, exist_ok=True)
 
     try:
@@ -49,7 +49,7 @@ def extract_keyframes_parallel(video_path, frame_column='frame_idx'):
             for frame in frames:
                 frame_bgr = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
                 
-                image_filename = f"{video_id}_{n_keyframe}.jpg"
+                image_filename = f"{n_keyframe:04d}.jpg"
                 image_path = os.path.join(output_dir, image_filename)
                 
                 cv2.imwrite(image_path, frame_bgr)

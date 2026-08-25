@@ -31,21 +31,10 @@ if %errorlevel% neq 0 (
     echo [LỖI] Chay extract_keyframes.py that bai!
     pause
     exit /b %errorlevel%
-)
-
-echo.
-echo ==========================================
-echo Bước 4: Compressing keyframes...
-echo ==========================================
-python compress_keyframes.py
-if %errorlevel% neq 0 (
-    echo [LỖI] Chay compress_keyframes.py that bai!
-    pause
-    exit /b %errorlevel%
-)
 
 echo.
 echo ==========================================
 echo Hoan thanh toan bo qua trinh!
 echo ==========================================
 pause
+)
