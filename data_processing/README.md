@@ -8,6 +8,8 @@
 
 Vào AIC26_TayLor, tạo thư mục AIC26_TayLor/dataset (hoặc chạy mkdir ./AIC26_TayLor/dataset)
 
+Tải mớ video về ./AIC26_TayLor/dataset/video
+
 wget hết video btc cung cấp về, giải nén vào AIC26/dataset/video
 
 winget install -e --id Python.Python.3.10
